@@ -30,7 +30,7 @@ export default function CardSlideAction() {
 
   return (
     <>
-      <div className="rounded-2xl w-full border-[#4D5358] border flex items-center justify-start gap-10 mt-20 overflow-hidden relative drop-shadow-2xl max-lg:max-w-md">
+      <div className="rounded-2xl w-full border-[#4D5358] border flex items-center justify-start gap-10 mt-20 overflow-hidden relative drop-shadow-2xl max-lg:max-w-96">
         <div className="z-50 bg-[#131313] w-full h-full p-6 flex items-center justify-center">
           <span className="text-[#B0B7BE] font-normal w-full items-center justify-center whitespace-nowrap">
             visto em
