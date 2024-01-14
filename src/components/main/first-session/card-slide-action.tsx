@@ -30,8 +30,8 @@ export default function CardSlideAction() {
 
   return (
     <>
-      <div className="rounded-2xl w-full border-[#4D5358] border flex items-center justify-start gap-10 mt-20 overflow-hidden relative drop-shadow-2xl max-md:max-w-md max-sm:max-w-sm max-lg:max-w-lg max-xl:max-w-xl">
-        <div className="z-50 bg-[#131313] w-full h-full p-6 flex items-center justify-center">
+      <div className="rounded-3xl w-full border-[#4D5358] border-2 flex items-center justify-start gap-10 mt-20 overflow-hidden relative max-sm:w-80 max-md:max-w-md max-lg:max-w-lg max-xl:max-w-xl">
+        <div className="z-50 bg-[#131313] border-2 border-[#131313] rounded-l-2xl w-full h-full p-6 flex items-center justify-center">
           <span className="text-[#B0B7BE] font-normal w-full items-center justify-center whitespace-nowrap">
             visto em
           </span>

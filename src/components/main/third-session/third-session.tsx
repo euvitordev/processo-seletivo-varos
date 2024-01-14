@@ -1,42 +1,42 @@
-import Image from "next/image"
-import aspasIcon from "../../../assets/aspas.svg"
-import groupImage from "../../../assets/image-group.svg"
-import CardStack from "./CardStack"
+import Image from "next/image";
+import aspasIcon from "../../../assets/aspas.svg";
+import groupImage from "../../../assets/image-group.svg";
+import CardStack from "./CardStack";
 
 export default function ThirdSession() {
   return (
-    <div className="flex mt-52 w-full items-start justify-between max-lg:flex-col">
-      <div className="flex flex-col max-md:items-center max-md:text-center max-md:w-full">
+    <div className="mt-52 flex w-full items-start justify-between max-lg:flex-col max-md:mt-20">
+      <div className="flex flex-col max-md:w-full max-md:items-center max-md:text-center">
         <div className="flex flex-col gap-2">
-          <h2 className="font-semibold text-4xl">Didática de verdade</h2>
-          <p className="font-semibold text-lg">Garantindo seu aprendizado</p>
+          <h2 className="text-4xl font-semibold">Didática de verdade</h2>
+          <p className="text-lg font-semibold">Garantindo seu aprendizado</p>
         </div>
         <CardStack />
       </div>
 
-      <div className="flex flex-col xl:max-w-xl max-lg:w-full max-xl:max-w-xl max-lg:max-w-lg max-md:max-w-md">
+      <div className="flex w-full max-w-xl flex-col">
         <Image src={groupImage} alt="" className="w-full" />
-        <div className="flex items-center justify-center border border-[#4D5358] py-4 px-24 rounded-3xl mt-20 shadow-2xl shadow-white/5">
-          <div className="flex items-center justify-center gap-10">
-            <div className="flex flex-col w-28 text-center gap-1">
-              <span className="font-bold text-lg text-[#C6CAD2]">+ 1000</span>
-              <p className="font-normal text-sm text-center">
+        <div className="mt-20 flex items-center justify-center rounded-[32px] border border-[#4D5358] px-24 py-4 shadow-2xl shadow-white/5 max-md:p-4">
+          <div className="flex items-center justify-center gap-10 max-md:gap-2">
+            <div className="flex w-fit flex-col gap-1 text-center">
+              <span className="text-lg font-bold text-[#C6CAD2]">+ 1000</span>
+              <p className="text-center text-sm font-normal">
                 Nota média geral das aulas
               </p>
             </div>
-            <div className="flex flex-col w-28 text-center gap-1">
-              <span className="font-bold text-lg text-[#19C819]">4,8/5</span>
-              <p className="font-normal text-sm text-center">
+            <div className="flex w-fit flex-col gap-1 text-center">
+              <span className="text-lg font-bold text-[#19C819]">4,8/5</span>
+              <p className="text-center text-sm font-normal">
                 Nota média geral das aulas
               </p>
             </div>
-            <div className="flex flex-col w-28 text-center gap-1">
-              <span className="font-bold text-lg text-[#C6CAD2]">10k +</span>
-              <p className="font-normal text-sm text-center">Comunidade</p>
+            <div className="flex w-fit flex-col gap-1 text-center">
+              <span className="text-lg font-bold text-[#C6CAD2]">10k +</span>
+              <p className="text-center text-sm font-normal">Comunidade</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import varosIcon from "../../assets/varos-icon.svg"
-import varosLogo from "../../assets/Varos Logotipo.svg"
-import Image from "next/image"
-import SectionFooterCourses from "./section-footer-courses"
-import WalletFooterSection from "./wallet-footer-section"
-import FooterSectionAbout from "./footer-section-about"
-import SocialMediaFooterSection from "./social-media-footer-section"
+import varosIcon from "../../assets/varos-icon.svg";
+import varosLogo from "../../assets/Varos Logotipo.svg";
+import Image from "next/image";
+import SectionFooterCourses from "./section-footer-courses";
+import WalletFooterSection from "./wallet-footer-section";
+import FooterSectionAbout from "./footer-section-about";
+import SocialMediaFooterSection from "./social-media-footer-section";
 
 export default function Footer() {
   const courseSection = [
@@ -24,10 +24,10 @@ export default function Footer() {
       text: "Enciclopédia de FII",
       link: "/",
     },
-  ]
+  ];
   return (
-    <footer className="w-full mt-32 max-md:h-full h-[502px] flex items-start justify-start gap-48 mb-14 max-lg:flex-col max-lg:gap-14">
-      <div className="flex flex-col items-start justify-between h-full gap-6">
+    <footer className="mb-14 mt-44 flex h-[502px] w-full items-start justify-start gap-48 max-lg:flex-col max-lg:gap-14 max-md:h-full">
+      <div className="flex h-full flex-col items-start justify-between gap-6">
         <div className="flex flex-col gap-4">
           <Image alt="" src={varosIcon} />
           <Image alt="" src={varosLogo} />
@@ -37,12 +37,12 @@ export default function Footer() {
           <span className="">Todos os direitos reservados</span>
         </div>
       </div>
-      <div className="flex items-start justify-center gap-12 max-lg:grid grid-cols-2">
+      <div className="flex grid-cols-2 items-start justify-center gap-12 max-lg:grid">
         <SectionFooterCourses />
         <WalletFooterSection />
         <FooterSectionAbout />
         <SocialMediaFooterSection />
       </div>
     </footer>
-  )
+  );
 }

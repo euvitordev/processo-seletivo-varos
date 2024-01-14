@@ -1,7 +1,7 @@
-"use client"
-import { useEffect, useState } from "react"
-import Image from "next/image"
-import aspasIcon from "../../../assets/aspas.svg"
+"use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import aspasIcon from "../../../assets/aspas.svg";
 
 const cardContent = [
   {
@@ -16,33 +16,33 @@ const cardContent = [
     text: "Nunca vi algo tão completo que nem o de vocês. E olha que esses 11 anos que tô no MF já assinei muita casa de análise. Nada chega perto do trabalho seu e da sua equipe.",
     author: "Assinante VAROS",
   },
-]
+];
 
 const CardStack = () => {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0)
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentCardIndex((prevIndex) =>
-        prevIndex < cardContent.length - 1 ? prevIndex + 1 : 0
-      )
-    }, 10000)
-    return () => clearInterval(timer)
-  }, [])
+        prevIndex < cardContent.length - 1 ? prevIndex + 1 : 0,
+      );
+    }, 10000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <div className="flex mt-20 relative max-md:w-full max-md:items-center">
+    <div className="relative mt-20 flex max-md:w-full max-md:items-center">
       {cardContent.map((card, index) => {
         const zIndex =
-          (index - currentCardIndex + cardContent.length) % cardContent.length
-        const isCurrentCard = index === currentCardIndex
+          (index - currentCardIndex + cardContent.length) % cardContent.length;
+        const isCurrentCard = index === currentCardIndex;
 
         return (
           <div
             key={index}
-            className={`absolute top-0 left-0 w-[372px] max-lg:hidden flex flex-col rounded-3xl border border-[#222729] px-12 py-8 items-start opacity-100 justify-start gap-4 transition-transform transform delay-150 duration-700 shadow-2xl shadow-[#131516]/50 ease-in-out ${
+            className={`absolute left-0 top-0 flex w-[372px] transform flex-col items-start justify-start gap-4 rounded-3xl border border-[#222729] px-12 py-8 opacity-100 shadow-2xl shadow-[#131516]/50 transition-transform delay-150 duration-700 ease-in-out max-lg:hidden ${
               isCurrentCard
-                ? "bg-[#131516] z-50"
+                ? "z-50 bg-[#131516]"
                 : "translate-x-24  translate-y-28 opacity-5"
             }`}
             style={{
@@ -51,28 +51,28 @@ const CardStack = () => {
             }}
           >
             <Image src={aspasIcon} alt="" className="w-21" />
-            <p className="font-medium text-lg text-[#B0B7BE]">{card.text}</p>
-            <span className="font-medium text-lg italic">{card.author}</span>
+            <p className="text-lg font-medium text-[#B0B7BE]">{card.text}</p>
+            <span className="text-lg font-medium italic">{card.author}</span>
           </div>
-        )
+        );
       })}
 
-      <div className="flex xl:mt-20 max-md:mb-8 md:hidden">
-        <div className="w-[368px] max-md:w-full max-md:flex-col max-md:items-start max-md:text-start flex bg-[#131516] border border-[#222729] rounded-3xl p-6 items-start justify-start gap-4 drop-shadow-2xl">
+      <div className="flex max-md:mb-8 md:hidden xl:mt-20">
+        <div className="flex w-[368px] items-start justify-start gap-4 rounded-3xl border border-[#222729] bg-[#131516] p-6 drop-shadow-2xl max-md:w-full max-md:flex-col max-md:items-start max-md:text-start">
           <Image src={aspasIcon} alt="" className="w-21" />
 
           <div className="flex flex-col justify-start gap-5">
-            <p className="font-medium text-lg text-[#B0B7BE]">
+            <p className="text-lg font-medium text-[#B0B7BE]">
               {cardContent[currentCardIndex].text}
             </p>
-            <span className="font-medium text-lg italic">
+            <span className="text-lg font-medium italic">
               {cardContent[currentCardIndex].author}
             </span>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CardStack
+export default CardStack;

@@ -1,80 +1,80 @@
-"use client"
-import Image from "next/image"
-import ArrowRight from "./../../../assets/caret--right.svg"
-import selecaoIcon from "./../../../assets/selecao-icon.svg"
-import fatorIcon from "./../../../assets/FATOR.svg"
-import dividendoIcon from "./../../../assets/Dividendos.svg"
-import acoesDoCDI from "./../../../assets/acoes-do-cdi.svg"
-import essencialIcon from "./../../../assets/Essencial.svg"
-import fllIcon from "./../../../assets/FII.svg"
-import smallCapsIcon from "./../../../assets/small caps.svg"
-import valuationIcon from "./../../../assets/valuationIcon.svg"
-import codigoPyIcon from "./../../../assets/CODIGO.svg"
-import dashIcon from "./../../../assets/Dash.svg"
-import minicursoIcon from "./../../../assets/Minicurso.svg"
-import enciclopediaFll from "./../../../assets/Enciclopedia.svg"
-import DropdownButton from "./DropdownButton"
-import DropdownItems from "./DropdownItems"
-import SelectedOptionBlock from "./SelectedOptionBlock"
+"use client";
+import Image from "next/image";
+import ArrowRight from "./../../../assets/caret--right.svg";
+import selecaoIcon from "./../../../assets/selecao-icon.svg";
+import fatorIcon from "./../../../assets/FATOR.svg";
+import dividendoIcon from "./../../../assets/Dividendos.svg";
+import acoesDoCDI from "./../../../assets/acoes-do-cdi.svg";
+import essencialIcon from "./../../../assets/Essencial.svg";
+import fllIcon from "./../../../assets/FII.svg";
+import smallCapsIcon from "./../../../assets/small caps.svg";
+import valuationIcon from "./../../../assets/valuationIcon.svg";
+import codigoPyIcon from "./../../../assets/CODIGO.svg";
+import dashIcon from "./../../../assets/Dash.svg";
+import minicursoIcon from "./../../../assets/Minicurso.svg";
+import enciclopediaFll from "./../../../assets/Enciclopedia.svg";
+import DropdownButton from "./DropdownButton";
+import DropdownItems from "./DropdownItems";
+import SelectedOptionBlock from "./SelectedOptionBlock";
 
-import { useState } from "react"
+import { useState } from "react";
 
 interface Option {
-  text: string
-  icon: string
-  description: string
-  image: string
-  title: string
+  text: string;
+  icon: string;
+  description: string;
+  image: string;
+  title: string;
 }
 
 export default function SecondSession() {
-  const [dropdownWalletVisible, setDropdownWalletVisible] = useState(false)
-  const [dropdownCourseVisible, setDropdownCourseVisible] = useState(false)
+  const [dropdownWalletVisible, setDropdownWalletVisible] = useState(false);
+  const [dropdownCourseVisible, setDropdownCourseVisible] = useState(false);
   const [dropdownConsultancyVisible, setDropdownConsultancyVisible] =
-    useState(false)
+    useState(false);
 
   const closeAllDropdowns = () => {
-    setDropdownWalletVisible(false)
-    setDropdownCourseVisible(false)
-    setDropdownConsultancyVisible(false)
-  }
+    setDropdownWalletVisible(false);
+    setDropdownCourseVisible(false);
+    setDropdownConsultancyVisible(false);
+  };
 
   const toggleDropdownWallet = () => {
-    setDropdownWalletVisible(!dropdownWalletVisible)
-    setDropdownCourseVisible(false)
-    setDropdownConsultancyVisible(false)
-  }
+    setDropdownWalletVisible(!dropdownWalletVisible);
+    setDropdownCourseVisible(false);
+    setDropdownConsultancyVisible(false);
+  };
 
   const toggleDropdownCourses = () => {
-    setDropdownCourseVisible(!dropdownCourseVisible)
-    setDropdownWalletVisible(false)
-    setDropdownConsultancyVisible(false)
-  }
+    setDropdownCourseVisible(!dropdownCourseVisible);
+    setDropdownWalletVisible(false);
+    setDropdownConsultancyVisible(false);
+  };
 
   const toggleDropdownConsultancy = () => {
-    setDropdownConsultancyVisible(!dropdownConsultancyVisible)
-    setDropdownWalletVisible(false)
-    setDropdownCourseVisible(false)
-  }
+    setDropdownConsultancyVisible(!dropdownConsultancyVisible);
+    setDropdownWalletVisible(false);
+    setDropdownCourseVisible(false);
+  };
 
-  const [selectedOption, setSelectedOption] = useState<Option | null>(null)
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const handleSelectOption = (index: number, optionType: string) => {
-    let selectedOption
+    let selectedOption;
 
     if (optionType === "wallet" && index < walletOptions.length) {
-      selectedOption = walletOptions[index]
+      selectedOption = walletOptions[index];
     } else if (optionType === "course" && index < coursesOptions.length) {
-      selectedOption = coursesOptions[index]
+      selectedOption = coursesOptions[index];
     } else if (
       optionType === "consultancy" &&
       index < consultancyOptions.length
     ) {
-      selectedOption = consultancyOptions[index]
+      selectedOption = consultancyOptions[index];
     }
 
-    setSelectedOption(selectedOption || null)
-  }
+    setSelectedOption(selectedOption || null);
+  };
 
   const walletOptions: Option[] = [
     {
@@ -131,7 +131,7 @@ export default function SecondSession() {
       description: "Descubra o potencial de retorno dessas ações dinâmicas.",
       image: acoesDoCDI,
     },
-  ]
+  ];
   const coursesOptions: Option[] = [
     {
       text: "Valuation 2.0",
@@ -185,7 +185,7 @@ export default function SecondSession() {
         "Este curso abrangente oferece uma compreensão aprofundada dos FIIs e estratégias de investimento associadas.",
       image: acoesDoCDI,
     },
-  ]
+  ];
   const consultancyOptions: Option[] = [
     {
       text: "Consultoria VAROS",
@@ -196,21 +196,21 @@ export default function SecondSession() {
         "Descubra o poder de ter consultores experientes ao seu lado.",
       image: acoesDoCDI,
     },
-  ]
+  ];
 
   const allOptions: Option[] = [
     ...walletOptions,
     ...coursesOptions,
     ...consultancyOptions,
-  ]
+  ];
 
   return (
-    <div className="flex flex-col w-full">
-      <div className="xl:max-w-xl flex flex-col gap-4 max-md:text-center max-md:items-center max-md:w-full">
-        <h2 className="mt-64 font-semibold text-4xl max-md:text-2xl">
+    <div className="mt-64 flex w-full flex-col max-md:mt-40">
+      <div className="flex flex-col gap-4 max-md:w-full max-md:items-center max-md:text-center xl:max-w-xl">
+        <h2 className=" text-4xl font-semibold max-md:text-2xl">
           Simplifique seus investimentos e alcance seus objetivos
         </h2>
-        <p className="font-normal text-lg max-w-lg text-[#B0B7BE] max-md:text-xl">
+        <p className="max-w-lg text-lg font-normal text-[#B0B7BE] max-md:text-xl">
           Conteúdos preparados para trazer mais segurança, independente do seu
           nível.
         </p>
@@ -218,7 +218,7 @@ export default function SecondSession() {
 
       <div className="mt-10 flex w-full justify-between max-md:flex-col max-md:items-center">
         {/*  */}
-        <div className="flex flex-col xl:max-w-80 w-full gap-4 max-md:w-full max-md:mb-8">
+        <div className="flex w-full flex-col gap-4 max-md:mb-8 max-md:w-full xl:max-w-80">
           <DropdownButton
             onClick={toggleDropdownWallet}
             isOpen={dropdownWalletVisible}
@@ -266,5 +266,5 @@ export default function SecondSession() {
         <SelectedOptionBlock selectedOption={selectedOption} />
       </div>
     </div>
-  )
+  );
 }
