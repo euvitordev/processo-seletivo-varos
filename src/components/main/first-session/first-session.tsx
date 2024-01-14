@@ -20,9 +20,9 @@ export default function FirstSession() {
   ];
 
   return (
-    <div className="max flex w-full items-center justify-between gap-64 max-lg:flex-col max-lg:items-center">
-      <div className="mt-40 flex max-w-xl flex-col gap-6 text-center max-lg:items-center">
-        <h1 className="text-6xl font-semibold max-md:text-5xl">
+    <div className="max flex w-full items-center justify-between gap-64  max-xl:gap-16 max-md:flex-col max-md:items-center">
+      <div className="mt-40 flex max-w-fit flex-col items-start gap-6 text-start max-md:items-center max-md:text-center">
+        <h1 className="text-6xl font-semibold max-xl:text-5xl max-md:text-4xl">
           Investir de forma mais inteligente passa por aqui.
         </h1>
         <p className="max-w-md max-md:text-xl">
@@ -37,7 +37,7 @@ export default function FirstSession() {
         <CardSlideAction />
       </div>
 
-      <div className="group mt-20 flex w-full flex-col items-start justify-center gap-20 max-lg:hidden">
+      <div className="group mt-20 flex w-full flex-col items-start justify-center gap-20 max-md:hidden">
         {cardData.map((card, index) => (
           <div
             key={index}

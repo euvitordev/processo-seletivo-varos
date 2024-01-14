@@ -36,8 +36,8 @@ export default function FourthSession() {
   };
 
   return (
-    <div className="mt-48 flex w-full items-start justify-between max-md:mt-32 max-md:flex-col max-md:items-center">
-      <div className="flex max-w-lg flex-col gap-4 max-md:w-full max-md:items-center max-md:text-center">
+    <div className="mt-48 flex w-full items-start justify-between max-xl:gap-24 max-md:mt-32 max-md:flex-col max-md:items-center">
+      <div className="flex max-w-lg flex-col gap-4 max-xl:max-w-96 max-md:w-full max-md:items-center max-md:text-center">
         <h2 className="text-4xl font-semibold max-md:max-w-sm">
           Cadastre-se para receber mais informações.
         </h2>

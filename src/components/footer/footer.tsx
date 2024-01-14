@@ -26,18 +26,20 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className="mb-14 mt-44 flex h-[502px] w-full items-start justify-start gap-48 max-lg:flex-col max-lg:gap-14 max-md:h-full">
+    <footer className="mb-14 mt-44 flex h-[502px] w-full items-start justify-start gap-48 max-xl:h-full max-xl:flex-col max-lg:gap-14 max-md:h-full">
       <div className="flex h-full flex-col items-start justify-between gap-6">
         <div className="flex flex-col gap-4">
           <Image alt="" src={varosIcon} />
           <Image alt="" src={varosLogo} />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex w-fit flex-col gap-2">
           <span className="">VAROS 2023</span>
-          <span className="">Todos os direitos reservados</span>
+          <span className="whitespace-nowrap">
+            Todos os direitos reservados
+          </span>
         </div>
       </div>
-      <div className="flex grid-cols-2 items-start justify-center gap-12 max-lg:grid">
+      <div className="flex grid-cols-2 items-start justify-center gap-12 max-md:grid">
         <SectionFooterCourses />
         <WalletFooterSection />
         <FooterSectionAbout />

@@ -57,7 +57,7 @@ const CardStack = () => {
         );
       })}
 
-      <div className="flex max-md:mb-8 md:hidden xl:mt-20">
+      <div className="flex max-md:mb-8 xl:mt-20 xl:hidden">
         <div className="flex w-[368px] items-start justify-start gap-4 rounded-3xl border border-[#222729] bg-[#131516] p-6 drop-shadow-2xl max-md:w-full max-md:flex-col max-md:items-start max-md:text-start">
           <Image src={aspasIcon} alt="" className="w-21" />
 
