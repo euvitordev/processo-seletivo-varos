@@ -20,8 +20,8 @@ export default function SelectedOptionBlock({
   return (
     <>
       <div className="w-full flex justify-end h-fit">
-        <div className="xl:max-w-2xl bg-[#131516] border-2 border-[#222729] rounded-3xl flex flex-col items-start w-full justify-between pl-12 max-lg:w-full">
-          <div className="flex items-center gap-4 mt-12">
+        <div className="xl:max-w-2xl bg-[#131516] border-2 border-[#222729] rounded-3xl flex flex-col items-start w-full justify-between pl-12 max-lg:w-full max-md:px-4 max-md:py-6">
+          <div className="flex items-center gap-4 mt-12 max-md:mt-8 max-md:ml-4">
             {selectedOption?.icon && (
               <Image alt="Ícone" src={selectedOption.icon} />
             )}
@@ -31,7 +31,7 @@ export default function SelectedOptionBlock({
             {selectedOption?.title ||
               "Selecione uma das opções para mais detalhes"}
           </h3>
-          <p className="mt-4 max-w-sm font-normal text-base text-[#D3D6DF]">
+          <p className="mt-4 lg:max-w-sm font-normal text-base text-[#D3D6DF] max-md:w-full">
             {selectedOption?.description ||
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim."}
           </p>
@@ -40,7 +40,7 @@ export default function SelectedOptionBlock({
             src={selectedOption?.image || acoesDoCDI}
             width={621}
             height={329}
-            className="rounded-br-3xl mt-6 shadow-2xl shadow-white/15"
+            className="rounded-br-3xl mt-6 shadow-2xl shadow-white/15 max-md:rounded-3xl max-md:bg-cover"
           />
         </div>
       </div>

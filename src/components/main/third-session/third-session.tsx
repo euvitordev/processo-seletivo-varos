@@ -6,7 +6,7 @@ import CardStack from "./CardStack"
 export default function ThirdSession() {
   return (
     <div className="flex mt-52 w-full items-start justify-between max-lg:flex-col">
-      <div className="flex flex-col">
+      <div className="flex flex-col max-md:items-center max-md:text-center max-md:w-full">
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-4xl">Didática de verdade</h2>
           <p className="font-semibold text-lg">Garantindo seu aprendizado</p>
@@ -14,7 +14,7 @@ export default function ThirdSession() {
         <CardStack />
       </div>
 
-      <div className="flex flex-col xl:max-w-xl max-lg:w-full">
+      <div className="flex flex-col xl:max-w-xl max-lg:w-full max-xl:max-w-xl max-lg:max-w-lg max-md:max-w-md">
         <Image src={groupImage} alt="" className="w-full" />
         <div className="flex items-center justify-center border border-[#4D5358] py-4 px-24 rounded-3xl mt-20 shadow-2xl shadow-white/5">
           <div className="flex items-center justify-center gap-10">

@@ -26,7 +26,7 @@ export default function DropdownItems({
           <button
             key={index}
             onClick={() => onSelect(index)}
-            className={`rounded-full flex items-center gap-4 w-full justify-start text-base p-6 hover:bg-[#222729]/50 transition-all delay-150 duration-150 ease-in-out  ${
+            className={`rounded-full flex items-center gap-4 w-fit justify-start text-base p-6 hover:bg-[#222729]/50 transition-all delay-150 duration-150 ease-in-out ${
               selectedOption?.text === item.text ? "bg-[#222729]/50" : ""
             }`}
           >

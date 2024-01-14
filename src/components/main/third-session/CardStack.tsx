@@ -31,7 +31,7 @@ const CardStack = () => {
   }, [])
 
   return (
-    <div className="flex mt-20 relative">
+    <div className="flex mt-20 relative max-md:w-full max-md:items-center">
       {cardContent.map((card, index) => {
         const zIndex =
           (index - currentCardIndex + cardContent.length) % cardContent.length
@@ -56,6 +56,21 @@ const CardStack = () => {
           </div>
         )
       })}
+
+      <div className="flex xl:mt-20 max-md:mb-8 md:hidden">
+        <div className="w-[368px] max-md:w-full max-md:flex-col max-md:items-start max-md:text-start flex bg-[#131516] border border-[#222729] rounded-3xl p-6 items-start justify-start gap-4 drop-shadow-2xl">
+          <Image src={aspasIcon} alt="" className="w-21" />
+
+          <div className="flex flex-col justify-start gap-5">
+            <p className="font-medium text-lg text-[#B0B7BE]">
+              {cardContent[currentCardIndex].text}
+            </p>
+            <span className="font-medium text-lg italic">
+              {cardContent[currentCardIndex].author}
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

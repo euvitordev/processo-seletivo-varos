@@ -9,8 +9,8 @@ export default function HomePage() {
       <main className="">
         <FirstSession />
         <SecondSession />
-        {/* <ThirdSession /> */}
-        {/* <FourthSession /> */}
+        <ThirdSession />
+        <FourthSession />
       </main>
     </>
   )

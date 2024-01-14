@@ -205,20 +205,20 @@ export default function SecondSession() {
   ]
 
   return (
-    <div className="flex flex-col w-full ">
-      <div className="max-w-xl flex flex-col gap-4 max-lg:text-center">
-        <h2 className="mt-64 font-semibold text-4xl">
+    <div className="flex flex-col w-full">
+      <div className="xl:max-w-xl flex flex-col gap-4 max-md:text-center max-md:items-center max-md:w-full">
+        <h2 className="mt-64 font-semibold text-4xl max-md:text-2xl">
           Simplifique seus investimentos e alcance seus objetivos
         </h2>
-        <p className="font-normal text-lg max-w-lg text-[#B0B7BE]">
+        <p className="font-normal text-lg max-w-lg text-[#B0B7BE] max-md:text-xl">
           Conteúdos preparados para trazer mais segurança, independente do seu
           nível.
         </p>
       </div>
 
-      <div className="mt-10 flex w-full justify-between max-lg:flex-col max-lg:items-center">
+      <div className="mt-10 flex w-full justify-between max-md:flex-col max-md:items-center">
         {/*  */}
-        <div className="flex flex-col xl:max-w-80 w-full gap-4 max-lg:w-full max-lg:mb-8">
+        <div className="flex flex-col xl:max-w-80 w-full gap-4 max-md:w-full max-md:mb-8">
           <DropdownButton
             onClick={toggleDropdownWallet}
             isOpen={dropdownWalletVisible}

@@ -36,16 +36,16 @@ export default function FourthSession() {
   }
 
   return (
-    <div className="w-full flex items-start justify-between mt-48 max-lg:flex-col ">
-      <div className="flex flex-col gap-2 max-w-lg">
-        <h2 className="font-semibold text-4xl">
+    <div className="w-full flex items-start justify-between mt-48 max-lg:flex-col max-md:items-center">
+      <div className="flex flex-col gap-4 max-w-lg max-md:w-full max-md:items-center max-md:text-center">
+        <h2 className="font-semibold text-4xl max-md:max-w-sm">
           Cadastre-se para receber mais informações.
         </h2>
         <p className="font-medium text-lg max-w-sm">
           Fique ligado no que tem de melhor no Mercado Financeiro.
         </p>
       </div>
-      <div className="w-[564px] h-[384] border rounded-3xl border-[#4D5358] bg-[#131516] p-14">
+      <div className="w-[564px] h-[384] border rounded-3xl border-[#4D5358] bg-[#131516] p-14 max-xl:max-w-xl max-lg: max-w-lg max-md:max-w-md max-md:mt-10">
         <form onSubmit={onSubmit} className="flex flex-col gap-6">
           <input
             type="text"
@@ -54,7 +54,7 @@ export default function FourthSession() {
             value={formData.nome}
             onChange={handleChange}
             placeholder="Nome"
-            className="border border-[#4D5358] bg-[#222729] rounded-md p-2 text-white"
+            className="border-2 border-[#4D5358] bg-[#222729] rounded-md p-2 max-md:p-4 text-white"
           />
 
           <input
@@ -64,7 +64,7 @@ export default function FourthSession() {
             placeholder="Seu melhor e-mail"
             value={formData.email}
             onChange={handleChange}
-            className="border border-[#4D5358] bg-[#222729] rounded-md p-2 text-white"
+            className="border-2 border-[#4D5358] bg-[#222729] rounded-md p-2 max-md:p-4 text-white"
           />
 
           <input
@@ -74,7 +74,7 @@ export default function FourthSession() {
             placeholder="Celular"
             value={formData.telefone}
             onChange={handleChange}
-            className="border border-[#4D5358] bg-[#222729] rounded-md p-2 text-white"
+            className="border-2 border-[#4D5358] bg-[#222729] rounded-md p-2 max-md:p-4 text-white"
           />
 
           <button

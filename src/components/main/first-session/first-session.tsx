@@ -22,10 +22,10 @@ export default function FirstSession() {
   return (
     <div className="flex items-center justify-between w-full gap-64 max-lg:flex-col max-lg:items-center ">
       <div className="flex flex-col max-w-xl mt-40 gap-6 max-lg:items-center text-center">
-        <h1 className="font-semibold text-6xl">
+        <h1 className="font-semibold text-6xl max-md:text-5xl">
           Investir de forma mais inteligente passa por aqui.
         </h1>
-        <p className="max-w-md">
+        <p className="max-w-md max-md:text-xl">
           Fazemos de tudo para que você possa conquistar seus sonhos da melhor
           forma possível.
         </p>

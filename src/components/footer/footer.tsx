@@ -26,8 +26,8 @@ export default function Footer() {
     },
   ]
   return (
-    <footer className="w-full mt-32 h-[502px] flex items-start justify-start gap-48 mb-14 max-lg:flex-col max-lg:gap-14">
-      <div className="flex flex-col items-start justify-between h-full">
+    <footer className="w-full mt-32 max-md:h-full h-[502px] flex items-start justify-start gap-48 mb-14 max-lg:flex-col max-lg:gap-14">
+      <div className="flex flex-col items-start justify-between h-full gap-6">
         <div className="flex flex-col gap-4">
           <Image alt="" src={varosIcon} />
           <Image alt="" src={varosLogo} />
