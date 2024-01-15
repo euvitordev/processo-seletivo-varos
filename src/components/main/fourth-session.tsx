@@ -45,7 +45,7 @@ export default function FourthSession() {
           Fique ligado no que tem de melhor no Mercado Financeiro.
         </p>
       </div>
-      <div className="max-lg: h-[384] w-[564px] max-w-lg rounded-3xl border border-[#4D5358] bg-[#131516] p-14 max-md:mt-10 max-md:w-fit max-md:p-12 max-sm:p-10">
+      <div className="h-[384] w-[564px] max-w-lg rounded-3xl border border-[#4D5358] bg-[#131516] p-14 max-md:mt-10  max-md:w-full max-md:p-12 max-sm:p-10">
         <form onSubmit={onSubmit} className="flex flex-col gap-6">
           <input
             type="text"

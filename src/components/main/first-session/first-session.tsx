@@ -21,7 +21,7 @@ export default function FirstSession() {
 
   return (
     <div className="max flex w-full items-center justify-between gap-64  max-xl:gap-16 max-md:flex-col max-md:items-center">
-      <div className="mt-40 flex max-w-fit flex-col items-start gap-6 text-start max-md:items-center max-md:text-center">
+      <div className="mt-40 flex max-w-fit flex-col items-start gap-6 text-start max-md:mt-20 max-md:items-center max-md:text-center">
         <h1 className="text-6xl font-semibold max-xl:text-5xl max-md:text-4xl">
           Investir de forma mais inteligente passa por aqui.
         </h1>
@@ -41,7 +41,7 @@ export default function FirstSession() {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className={`flex cursor-pointer items-center gap-5 rounded-2xl border border-[#4D5358] py-2 pl-2 pr-12 shadow-2xl shadow-white/10  transition-all delay-150 duration-300 ease-in-out group-hover:animate-bounce ${
+            className={`flex cursor-pointer items-center gap-5 rounded-2xl border border-[#4D5358] py-2 pl-2 pr-12 shadow-2xl shadow-white/5  transition-all delay-150 duration-300 ease-in-out group-hover:animate-bounce ${
               card.title === "Carteira de Dividendos" ? "ml-9" : ""
             }`}
           >

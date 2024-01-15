@@ -218,7 +218,7 @@ export default function SecondSession() {
 
       <div className="mt-10 flex w-full justify-between gap-56 max-xl:gap-6 max-md:flex-col max-md:items-center">
         {/*  */}
-        <div className="flex w-full flex-col gap-4 max-xl:max-w-80 max-md:mb-8 max-md:w-full">
+        <div className="flex w-full flex-col gap-4 max-md:mb-8 max-md:w-full">
           <DropdownButton
             onClick={toggleDropdownWallet}
             isOpen={dropdownWalletVisible}

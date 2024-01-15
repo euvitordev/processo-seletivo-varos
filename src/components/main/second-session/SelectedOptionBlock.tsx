@@ -19,7 +19,7 @@ export default function SelectedOptionBlock({
 }: SelectedOptionBlockProps) {
   return (
     <>
-      <div className="flex h-fit w-full justify-end max-xl:mt-20 max-xl:w-fit">
+      <div className="flex h-fit w-full justify-end max-xl:w-fit max-md:mt-8">
         <div className="flex w-full flex-col items-start justify-between rounded-3xl border-2 border-[#222729] bg-[#131516] pl-12 max-lg:w-full max-md:px-4 max-md:py-6 xl:max-w-2xl">
           <div className="mt-12 flex items-center gap-4 max-md:ml-4 max-md:mt-8">
             {selectedOption?.icon && (

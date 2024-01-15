@@ -30,24 +30,26 @@ export default function CardSlideAction() {
 
   return (
     <>
-      <div className="relative mt-20 flex w-full items-center justify-start gap-20 overflow-hidden rounded-3xl border-2 border-[#4D5358] max-xl:max-w-xl max-lg:max-w-lg max-md:max-w-md max-sm:w-80">
-        <div className="z-50 flex h-full w-full items-center justify-center rounded-l-2xl border-2 border-[#131313] bg-[#131313] p-6">
-          <span className="w-full items-center justify-center whitespace-nowrap font-normal text-[#B0B7BE]">
-            visto em
-          </span>
-        </div>
-        <div
-          className="flex gap-28"
-          style={{
-            transform: `translateX(${
-              -(100 / cardIcons.length) * currentIndex
-            }%)`,
-            transition: "transform 3s ease-in",
-          }}
-        >
-          {cardIcons.map((item, index) => (
-            <Image key={index} src={item.image} alt={item.alt} />
-          ))}
+      <div className="mt-20 rounded-[36px] bg-gradient-to-r from-[#4D5358] to-transparent to-50% p-0.5">
+        <div className="relative  flex w-full max-w-2xl items-center justify-start gap-20 overflow-hidden rounded-[36px] bg-[#131313] max-xl:max-w-xl max-lg:max-w-lg max-md:max-w-md max-sm:w-80">
+          <div className="z-50 flex h-full w-full items-center justify-center rounded-l-2xl border-2 border-[#131313] bg-[#131313] p-6">
+            <span className="w-full items-center justify-center whitespace-nowrap font-normal text-[#B0B7BE]">
+              visto em
+            </span>
+          </div>
+          <div
+            className="flex gap-28"
+            style={{
+              transform: `translateX(${
+                -(100 / cardIcons.length) * currentIndex
+              }%)`,
+              transition: "transform 3s ease-in",
+            }}
+          >
+            {cardIcons.map((item, index) => (
+              <Image key={index} src={item.image} alt={item.alt} />
+            ))}
+          </div>
         </div>
       </div>
     </>
