@@ -1,39 +1,57 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from "react";
-import axios from "axios";
+import { useState } from "react";
+import { useForm, SubmitErrorHandler, SubmitHandler } from "react-hook-form";
+import { toast } from "sonner";
+
+type FormData = {
+  id: string;
+  name: string;
+  email: string;
+  phoneNumber: number;
+};
 
 export default function FourthSession() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
+  const [formDataList, setFormDataList] = useState<FormData[]>([]);
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>({
+    defaultValues: {
+      name: "",
+      email: "",
+      phoneNumber: undefined,
+    },
+    mode: "onBlur",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
+  const onSubmit: SubmitHandler<FormData> = async (data: FormData) => {
     try {
-      const response = await axios.post("../../api/enviar-dados", formData);
-      console.log("Resposta do servidor:", response.data);
+      const response = await fetch("api/cadastro-mercado-financeiro", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log("Dados enviados com sucesso!");
+        setFormDataList((prevList) => [...prevList, data]);
+        reset();
+
+        toast.success("Cadastro realizado com sucesso!");
+      } else {
+        console.error("Falha ao enviar dados!");
+      }
     } catch (error) {
       console.error("Erro ao enviar dados:", error);
     }
-
-    // Limpar o formulário após o envio
-    setFormData({
-      nome: "",
-      email: "",
-      telefone: "",
-    });
   };
+
+  const onError: SubmitErrorHandler<FormData> = (errors) => console.log(errors);
 
   return (
     <div className="mt-48 flex w-full items-start justify-between max-xl:gap-24 max-md:mt-32 max-md:flex-col max-md:items-center">
@@ -45,37 +63,67 @@ export default function FourthSession() {
           Fique ligado no que tem de melhor no Mercado Financeiro.
         </p>
       </div>
+
       <div className="h-[384] w-[564px] max-w-lg rounded-3xl border border-[#4D5358] bg-[#131516] p-14 max-md:mt-10  max-md:w-full max-md:p-12 max-sm:p-10">
-        <form onSubmit={onSubmit} className="flex flex-col gap-6">
+        <form
+          className="flex flex-col gap-6"
+          onSubmit={handleSubmit(onSubmit, onError)}
+        >
           <input
+            {...register("name", {
+              required: "Nome e obrigatório",
+              minLength: {
+                value: 10,
+                message: "Nome precisa ter pelo menos 10 caracteres",
+              },
+            })}
             type="text"
-            name="nome"
+            name="name"
             id="name"
-            value={formData.nome}
-            onChange={handleChange}
             placeholder="Nome"
             className="rounded-md border-2 border-[#4D5358] bg-[#222729] p-2 text-white max-md:p-4"
           />
+          {errors?.name && (
+            <span className="-mt-4 text-red-500">{errors.name.message}</span>
+          )}
 
           <input
+            {...register("email", {
+              required: "E-mail e obrigatório",
+              minLength: {
+                value: 10,
+                message: "E-mail precisa ter pelo menos 10 caracteres",
+              },
+            })}
             type="email"
             name="email"
             id="email"
             placeholder="Seu melhor e-mail"
-            value={formData.email}
-            onChange={handleChange}
             className="rounded-md border-2 border-[#4D5358] bg-[#222729] p-2 text-white max-md:p-4"
           />
+          {errors?.email && (
+            <span className="-mt-4 text-red-500">{errors.email.message}</span>
+          )}
 
           <input
+            {...register("phoneNumber", {
+              required: "Telefone e obrigatório",
+              minLength: {
+                value: 9,
+                message: "Telefone precisa ter no mínimo 9 números",
+              },
+            })}
             type="tel"
-            name="telefone"
-            id="telefone"
+            name="phoneNumber"
+            id="phoneNumber"
             placeholder="Celular"
-            value={formData.telefone}
-            onChange={handleChange}
             className="rounded-md border-2 border-[#4D5358] bg-[#222729] p-2 text-white max-md:p-4"
           />
+          {errors?.phoneNumber && (
+            <span className="-mt-4 text-red-500">
+              {errors.phoneNumber.message}
+            </span>
+          )}
 
           <button
             type="submit"
