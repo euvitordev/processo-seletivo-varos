@@ -1,12 +1,12 @@
-"use client"
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import bradVisorsIcon from "../../../assets/bradvisors.svg"
-import fIcon from "../../../assets/f.svg"
-import economicValorIcon from "../../../assets/economico-valor.svg"
-import neoFeedIcon from "../../../assets/neofeed.svg"
-import bmecNewsIcon from "../../../assets/bmec-news.svg"
-import tcIcon from "../../../assets/tc.svg"
+"use client";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import bradVisorsIcon from "../../../assets/bradvisors.svg";
+import fIcon from "../../../assets/f.svg";
+import economicValorIcon from "../../../assets/economico-valor.svg";
+import neoFeedIcon from "../../../assets/neofeed.svg";
+import bmecNewsIcon from "../../../assets/bmec-news.svg";
+import tcIcon from "../../../assets/tc.svg";
 
 const cardIcons = [
   { image: bradVisorsIcon, alt: "" },
@@ -15,34 +15,34 @@ const cardIcons = [
   { image: tcIcon, alt: "" },
   { image: bmecNewsIcon, alt: "" },
   { image: neoFeedIcon, alt: "" },
-]
+];
 
 export default function CardSlideAction() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % cardIcons.length)
-    }, 3000)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % cardIcons.length);
+    }, 3000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
-      <div className="rounded-3xl w-full border-[#4D5358] border-2 flex items-center justify-start gap-10 mt-20 overflow-hidden relative max-sm:w-80 max-md:max-w-md max-lg:max-w-lg max-xl:max-w-xl">
-        <div className="z-50 bg-[#131313] border-2 border-[#131313] rounded-l-2xl w-full h-full p-6 flex items-center justify-center">
-          <span className="text-[#B0B7BE] font-normal w-full items-center justify-center whitespace-nowrap">
+      <div className="relative mt-20 flex w-full items-center justify-start gap-20 overflow-hidden rounded-3xl border-2 border-[#4D5358] max-xl:max-w-xl max-lg:max-w-lg max-md:max-w-md max-sm:w-80">
+        <div className="z-50 flex h-full w-full items-center justify-center rounded-l-2xl border-2 border-[#131313] bg-[#131313] p-6">
+          <span className="w-full items-center justify-center whitespace-nowrap font-normal text-[#B0B7BE]">
             visto em
           </span>
         </div>
         <div
-          className="flex transition-transform ease-in-out delay-150 duration-500 gap-28"
+          className="flex gap-28"
           style={{
             transform: `translateX(${
-              -(150 / cardIcons.length) * currentIndex
+              -(100 / cardIcons.length) * currentIndex
             }%)`,
-            transition: "transform 10s ease-in-out",
+            transition: "transform 3s ease-in",
           }}
         >
           {cardIcons.map((item, index) => (
@@ -51,5 +51,5 @@ export default function CardSlideAction() {
         </div>
       </div>
     </>
-  )
+  );
 }
