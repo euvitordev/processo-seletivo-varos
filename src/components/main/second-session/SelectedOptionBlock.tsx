@@ -48,7 +48,7 @@ export default function SelectedOptionBlock({
             src={selectedOption?.image || acoesDoCDIMobile}
             width={621}
             height={329}
-            className="mt-6 md:hidden"
+            className="mt-6 rounded-3xl md:hidden"
           />
         </div>
       </div>
