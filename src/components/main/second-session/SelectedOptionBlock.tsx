@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import acoesDoCDI from "./../../../assets/acoes-do-cdi.svg";
+import acoesDoCDIMobile from "./../../../assets/image-acoes-do-cdi-mobile.svg";
 
 interface Option {
   text: string;
@@ -40,7 +41,14 @@ export default function SelectedOptionBlock({
             src={selectedOption?.image || acoesDoCDI}
             width={621}
             height={329}
-            className="mt-6 rounded-br-3xl shadow-2xl shadow-white/15 max-md:rounded-3xl max-md:bg-cover"
+            className="mt-6 rounded-br-3xl shadow-2xl shadow-white/15 max-md:hidden"
+          />
+          <Image
+            alt=" "
+            src={selectedOption?.image || acoesDoCDIMobile}
+            width={621}
+            height={329}
+            className="mt-6 md:hidden"
           />
         </div>
       </div>

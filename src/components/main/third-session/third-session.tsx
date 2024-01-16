@@ -8,7 +8,7 @@ export default function ThirdSession() {
     <div className="mt-52 flex w-full items-start justify-between max-xl:gap-12 max-md:mt-20 max-md:flex-col">
       <div className="flex flex-col max-md:w-full max-md:items-center max-md:text-center">
         <div className="flex flex-col gap-2">
-          <h2 className="text-4xl font-semibold">Didática de verdade</h2>
+          <h2 className="text-4xl font-bold">Didática de verdade</h2>
           <p className="text-lg font-semibold">Garantindo seu aprendizado</p>
         </div>
         <CardStack />

@@ -22,7 +22,7 @@ export default function FirstSession() {
   return (
     <div className="max flex w-full items-center justify-between gap-64  max-xl:gap-16 max-md:flex-col max-md:items-center">
       <div className="mt-40 flex max-w-fit flex-col items-start gap-6 text-start max-md:mt-20 max-md:items-center max-md:text-center">
-        <h1 className="text-6xl font-semibold max-xl:text-5xl max-md:text-4xl">
+        <h1 className="text-6xl font-bold max-xl:text-5xl max-md:text-4xl">
           Investir de forma mais inteligente passa por aqui.
         </h1>
         <p className="max-w-md max-md:text-xl">

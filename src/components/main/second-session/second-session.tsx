@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import ArrowRight from "./../../../assets/caret--right.svg";
 import selecaoIcon from "./../../../assets/selecao-icon.svg";
 import fatorIcon from "./../../../assets/FATOR.svg";
@@ -16,7 +15,6 @@ import enciclopediaFll from "./../../../assets/Enciclopedia.svg";
 import DropdownButton from "./DropdownButton";
 import DropdownItems from "./DropdownItems";
 import SelectedOptionBlock from "./SelectedOptionBlock";
-
 import { useState } from "react";
 
 interface Option {
@@ -206,8 +204,8 @@ export default function SecondSession() {
 
   return (
     <div className="mt-64 flex w-full flex-col max-md:mt-40">
-      <div className="flex max-w-xl flex-col gap-4 max-xl:max-w-md max-md:w-full max-md:items-center max-md:text-center">
-        <h2 className=" text-4xl font-semibold max-md:text-2xl">
+      <div className="flex max-w-xl flex-col gap-4 max-lg:mx-auto max-md:w-full max-md:items-center max-md:text-center">
+        <h2 className=" text-4xl font-bold max-md:text-2xl">
           Simplifique seus investimentos e alcance seus objetivos
         </h2>
         <p className="max-w-lg text-lg font-normal text-[#B0B7BE] max-md:text-xl">

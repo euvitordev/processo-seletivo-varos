@@ -12,7 +12,7 @@ let dataArray: DataItem[] = [
     id: "1",
     name: "Exemplo Fulano de tal",
     email: "exemplofulanodetal@email.com",
-    phoneNumber: 89999898565,
+    phoneNumber: 2136959253,
   },
   // ... outros dados
 ];
