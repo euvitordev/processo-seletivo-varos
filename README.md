@@ -48,6 +48,11 @@ Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
 npm run dev
 ```
 
+## 🌐 Rotas e API: 
+
+Para conferir a página que captura os dados do formulário e envia para uma API dentro do Next.js, na qual é redirecionada para uma rota com uma nova página, basta acessar: este **[link](https://processo-seletivo-varos.vercel.app/cadastros-ativos)**
+
+- ou https://processo-seletivo-varos.vercel.app/cadastros-ativos
 ## 📦 Tecnologias Utilizadas:
 
 **Tecnologias empregadas no projeto:**
