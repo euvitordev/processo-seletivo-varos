@@ -7,11 +7,12 @@ type FormData = {
   id: string;
   name: string;
   email: string;
-  phoneNumber: number;
+  phoneNumber: string;
 };
 
 export default function FourthSession() {
   const [formDataList, setFormDataList] = useState<FormData[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
     handleSubmit,
@@ -22,13 +23,22 @@ export default function FourthSession() {
     defaultValues: {
       name: "",
       email: "",
-      phoneNumber: undefined,
+      phoneNumber: "",
     },
     mode: "onBlur",
   });
 
   const onSubmit: SubmitHandler<FormData> = async (data: FormData) => {
     try {
+      setIsSubmitting(true);
+
+      data.phoneNumber = data.phoneNumber.replace(/\D/g, "");
+
+      data.phoneNumber = data.phoneNumber.replace(
+        /(\d{2})(\d{5})(\d{4})/,
+        "($1) $2-$3",
+      );
+
       const response = await fetch("api/cadastro-mercado-financeiro", {
         method: "POST",
         headers: {
@@ -42,7 +52,10 @@ export default function FourthSession() {
         setFormDataList((prevList) => [...prevList, data]);
         reset();
 
-        toast.success("Cadastro realizado com sucesso!");
+        setTimeout(() => {
+          setIsSubmitting(false);
+          toast.success("Cadastro realizado com sucesso!");
+        }, 1000);
       } else {
         console.error("Falha ao enviar dados!");
       }
@@ -52,6 +65,19 @@ export default function FourthSession() {
   };
 
   const onError: SubmitErrorHandler<FormData> = (errors) => console.log(errors);
+
+  const formatPhoneNumber = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const input = event.target;
+    const inputValue = input.value.replace(/\D/g, "");
+
+    if (inputValue.length <= 11) {
+      input.value = inputValue.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+    } else {
+      input.value = inputValue
+        .replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3")
+        .substring(0, 15);
+    }
+  };
 
   return (
     <div className="mt-48 flex w-full items-start justify-between max-xl:gap-24 max-md:mt-32 max-md:flex-col max-md:items-center">
@@ -107,10 +133,14 @@ export default function FourthSession() {
 
           <input
             {...register("phoneNumber", {
-              required: "Telefone e obrigatório",
+              required: "Telefone é obrigatório",
               minLength: {
-                value: 9,
-                message: "Telefone precisa ter no mínimo 9 números",
+                value: 10,
+                message: "Telefone precisa ter no mínimo 10 números",
+              },
+              maxLength: {
+                value: 15,
+                message: "Telefone deve ter no máximo 15 caracteres",
               },
             })}
             type="tel"
@@ -118,18 +148,18 @@ export default function FourthSession() {
             id="phoneNumber"
             placeholder="Celular"
             className="rounded-md border-2 border-[#4D5358] bg-[#222729] p-2 text-white max-md:p-4"
+            onChange={formatPhoneNumber}
           />
           {errors?.phoneNumber && (
             <span className="-mt-4 text-red-500">
               {errors.phoneNumber.message}
             </span>
           )}
-
           <button
             type="submit"
             className="rounded-md border border-[#FAFAFA] bg-[#19C819] p-4 text-lg font-semibold text-[#131313] hover:opacity-80"
           >
-            QUERO ME INSCREVER
+            {isSubmitting ? "Enviando..." : "QUERO ME INSCREVER"}
           </button>
         </form>
       </div>
