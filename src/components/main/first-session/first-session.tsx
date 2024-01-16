@@ -20,16 +20,16 @@ export default function FirstSession() {
   ];
 
   return (
-    <div className="max flex w-full items-center justify-between gap-64  max-xl:gap-16 max-md:flex-col max-md:items-center">
+    <div className="max group flex w-full items-center justify-between gap-64  max-xl:gap-16 max-md:flex-col max-md:items-center">
       <div className="mt-40 flex max-w-fit flex-col items-start gap-6 text-start max-md:mt-20 max-md:items-center max-md:text-center">
         <h1 className="text-6xl font-bold max-xl:text-5xl max-md:text-4xl">
           Investir de forma mais inteligente passa por aqui.
         </h1>
-        <p className="max-w-md max-md:text-xl">
+        <p className="max-w-md text-lg font-semibold max-md:text-xl">
           Fazemos de tudo para que você possa conquistar seus sonhos da melhor
           forma possível.
         </p>
-        <button className="mt-8 flex w-60 items-center justify-center gap-3 rounded-full bg-[#19C819]/40 p-4 text-base text-[#00F700] hover:bg-[#19C819]/20">
+        <button className="mt-8 flex w-60 items-center justify-center gap-3 rounded-full border-2 border-transparent bg-[#19C819]/40 p-4 text-base text-[#00F700] transition-all delay-150 duration-300 ease-in-out hover:border-[#19C819] hover:bg-transparent ">
           Comprar agora
           <Image src={ArrowRight} alt="Icone de seta para direita" />
         </button>
@@ -37,7 +37,7 @@ export default function FirstSession() {
         <CardSlideAction />
       </div>
 
-      <div className="group mt-20 flex w-full flex-col items-start justify-center gap-20 max-md:hidden">
+      <div className="mt-20 flex w-full flex-col items-start justify-center gap-20 max-md:hidden">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -45,7 +45,7 @@ export default function FirstSession() {
               card.title === "Carteira de Dividendos" ? "ml-9" : ""
             }`}
           >
-            <div className="rounded-xl border border-[#4D5358] p-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#4D5358]">
               <Image src={card.image} alt="" />
             </div>
             <p className="">

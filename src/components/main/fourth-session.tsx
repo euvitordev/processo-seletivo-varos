@@ -157,9 +157,11 @@ export default function FourthSession() {
           )}
           <button
             type="submit"
-            className="rounded-md border border-[#FAFAFA] bg-[#19C819] p-4 text-lg font-semibold text-[#131313] hover:opacity-80"
+            className="rounded-md border-2 border-[#FAFAFA] bg-[#19C819] p-4 text-lg font-semibold text-[#131313]  transition-all delay-150 duration-300 ease-in-out hover:bg-transparent hover:text-[#FAFAFA]"
           >
-            {isSubmitting ? "Enviando..." : "QUERO ME INSCREVER"}
+            {isSubmitting
+              ? "Finalizando sua inscrição..."
+              : "QUERO ME INSCREVER"}
           </button>
         </form>
       </div>
