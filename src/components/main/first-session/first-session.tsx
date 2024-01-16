@@ -16,7 +16,7 @@ export default function FirstSession() {
   const cardData = [
     { image: CardHero1, title: "Carteira FATOR" },
     { image: CardHero2, title: "Carteira de Dividendos" },
-    { image: CardHero3, title: "Código .py", code: true },
+    { image: CardHero3, title: "Código", code: true },
   ];
 
   return (
