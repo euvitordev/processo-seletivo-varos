@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Processo Seletivo - VAROS
 
-## Getting Started
+![Imagem do projeto](https://i.imgur.com/Xy7f50g.png)
 
-First, run the development server:
+**Simplifique seus investimentos e alcance seus objetivos!**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🔥 Introdução
+
+#### A varos é uma plataforma de investimentos que oferece conteúdos, carteiras recomendadas e dicas de estratégia para multiplicar o seu patrimônio.
+
+**Características Principais:**
+
+- **Plataforma de investimentos com conteúdo e estratégia:** Uma plataforma de investimentos que oferece conteúdos, carteiras recomendadas e dicas de estratégia para multiplicar o seu patrimônio em 2024.
+
+- **Arte de descobrir o valor de uma ação:** Ensina a aplicar a arte de descobrir o valor de uma ação, a evitar as que estão caras, a ganhar dinheiro fugindo do consenso e a ter resultados exponenciais com ações e fundos imobiliários
+
+- **Cursos de formação prática e atualizada:** Oferece cursos de formação prática e atualizada sobre valuation, data science e marketing digital, com material útil e suporte direto do professor.
+
+- **Comunidade de alunos engajados e satisfeitos:** Conta com uma comunidade de alunos engajados e satisfeitos, que compartilham suas experiências e aprendizados no mercado financeiro.
+
+- **Oportunidade única para se preparar para o futuro:** Uma oportunidade única para quem quer se preparar para enfrentar os desafios e as oportunidades do mundo dos investimentos
+
+## ⚙️ Pré-requisitos
+
+Para executar o concept do processo seletivo **VAROS** localmente, certifique-se de ter instalado em sua máquina:
+
+```
+Node.js (versão 14 ou superior)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Além disso, clone o repositório do projeto no seu diretório preferido:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+git clone https://github.com/euvitordev/processo-seletivo-varos.git
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🔨 Guia de instalação
 
-## Learn More
+_Para instalar as dependências do projeto, execute o seguinte comando na raiz do repositório:_
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+## 📦 Tecnologias Utilizadas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Tecnologias empregadas no projeto:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+- [React JS](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Next JS](https://nextjs.org/)
+- [shadcn/ui](https://ui.shadcn.com/)
+
+## 👷 Autor
+
+- **Vitor Valente** - Desenvolvedor Front-end - [@euvitordev](https://github.com/euvitordev)
